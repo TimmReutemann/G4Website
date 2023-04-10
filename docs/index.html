@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Website Name</title>
+    <title>Gra4</title>
     <style>
       @font-face {
         font-family: "Electronic Highway Sign";
@@ -18,12 +18,14 @@
         text-align: center;
         font-size: 4rem;
         padding: 2rem;
+        background-color: #000000;
       }
       .video {
         position: relative;
-        height: 100vh;
+        height: calc(100vh - 120px); /* subtract the height of the top and bottom bars */
         width: 100%;
         overflow: hidden;
+        margin-top: 60px; /* add some space between the video and the top bar */
       }
       .video video {
         position: absolute;
@@ -33,27 +35,56 @@
         height: 100%;
         object-fit: cover;
       }
+      .iframe-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin-bottom: 60px; /* add some space between the iframe and the bottom bar */
+      }
+      .iframe-wrapper iframe {
+        width: 1200px;
+        height: 675px;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .bottom-bar {
+        background-color: #000000;
+        height: 60px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        padding: 0 2rem;
+      }
     </style>
   </head>
   <body>
-    <header class="header">Website Name</header>
+    <div class="header">Website Name</div>
     <div class="video">
       <video autoplay loop muted>
         <source src="video.mp4" type="video/mp4">
       </video>    
-      <iframe src="https://gruppe4gamebucket.s3.eu-central-1.amazonaws.com/index.html" overflow:hidden; 
-        width="1280px" 
-        height="720px"
-        title="VRMap" 
-        scrolling="no" 
-        overflow="hidden"
-        overflow-y="hidden"
-        allowfullscreen="true";>
+      <div class="iframe-wrapper">
+        <iframe src="https://gruppe4gamebucket.s3.eu-central-1.amazonaws.com/index.html" overflow:hidden; 
+width="100%" 
+height="720px"
+title="VRMap" 
+scrolling="no" 
+overflow="hidden"
+overflow-y="hidden"
+allowfullscreen="true";>
 
-        Browser not compatible.
+Browser not compatible.
 
 </iframe>
-      
+      </div>
     </div>
+    <div class="bottom-bar">Contact Information and Other Things</div>
   </body>
 </html>
+
