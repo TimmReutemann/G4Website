@@ -15,12 +15,6 @@ body, html {
   font-size: 20px;
 }
 
-.bgimg {
-  background-position: center;
-  background-size: cover;
-  background-image: url("/w3images/coffeehouse.jpg");
-  min-height: 75%;
-}
 
 .menu {
   display: none;
@@ -50,9 +44,9 @@ iframe {
 .w-container:after
 .w-container:before
 
-.w3-row:after,.w3-row:before,.w3-row-padding:after,.w3-row-padding:before,
+.w3-row:after,.w3-row:before
 
-dt {
+dl {
   font-size: 18px;
 }
 
@@ -69,7 +63,7 @@ dt {
 <div class="w-top">
   <div class="w3-row w3-padding w3-black">
     <div class="w3-col s3">
-      <a href="#" class="w3-button w3-block w3-black">PLAY</a>
+      <a href="#play" class="w3-button w3-block w3-black">PLAY</a>
     </div>
     <div class="w3-col s3">
       <a href="#trailer" class="w3-button w3-block w3-black">TRAILER</a>
@@ -90,20 +84,52 @@ dt {
 </div>
 
 <!-- Header with Unity Window -->
+<br><br>
 <div class="w-container" id="play" style="background-color: #cccccc">
-  <div class="w3-content" style="max-width:700px">
+  <div>
     <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">PLAY</span></h5>
-    <p>The Cafe.</p>
+    <iframe src="https://gruppe4gamebucket.s3.eu-central-1.amazonaws.com/index.html" overflow:hidden;
+      width="100%"
+      height="720px"
+      title="VRMap"
+      scrolling="no"
+      overflow="hidden"
+      overflow-y="hidden"
+      frameborder="0"
+      allowfullscreen="true";>
+    </iframe>
   </div>
 </div>
 
+<!-- CONTROLS -->
+<div class="w-container" id="story" style="background-color: #cccccc">
+  <div class="w3-content" style="max-width:700px">
+    <center>
+      <h4 style="font-size: 40px">CONTROLS</h4>
+      <dl style="font-size: 26px">
+        <dt>WALK: W A S D</dt>
+        <dt>CHOOSE TARGET: E</dt>
+        <dt>PULL: Q or LEFT-MOUSEBUTTON</dt>
+        <dt>REFLECT: RIGHT-MOUSEBUTTON</dt>
+        <dt>LEFT-CLICK DIALOGUEBOX TO USE PORTAL</dt>
+      </dl>
+      <br><br>
+    </center>
+  </div>
+</div>
 <!-- Add a background color and large text to the whole page -->
 <div class="w3-sand w3-grayscale w3-large">
 
 <!-- TRAILER Container -->
 <div class="w-container" id="trailer" style="background-color: #cccccc">
   <div align="center">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="1280"
+            height="720"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
   </div>
 </div>
 
