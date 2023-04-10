@@ -26,6 +26,7 @@
         width: 100%;
         overflow: hidden;
         margin-top: 60px; /* add some space between the video and the top bar */
+        z-index: 1; /* ensure that the game area is on top of other elements */
       }
       .video video {
         position: absolute;
@@ -41,6 +42,8 @@
         align-items: center;
         height: 100%;
         margin-bottom: 60px; /* add some space between the iframe and the bottom bar */
+        position: relative;
+        z-index: 2; /* ensure that the iframe is on top of the video element */
       }
       .iframe-wrapper iframe {
         width: 1200px;
@@ -63,7 +66,13 @@
       }
     </style>
   </head>
-  <body>    
+  <body>
+    <div class="header">Website Name</div>
+    <div class="video">
+      <video autoplay loop muted>
+        <source src="video.mp4" type="video/mp4">
+      </video>    
+      <div class="iframe-wrapper">
         <iframe src="https://gruppe4gamebucket.s3.eu-central-1.amazonaws.com/index.html" overflow:hidden; 
 width="100%" 
 height="720px"
@@ -81,4 +90,3 @@ Browser not compatible.
     <div class="bottom-bar">Contact Information and Other Things</div>
   </body>
 </html>
-
